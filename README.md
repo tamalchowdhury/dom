@@ -123,4 +123,4 @@ Now when you open up your app and click on the button, the event will fire, the 
 
 If you learned something new from this repo, please star ⭐ it on GitHub. You can also tweet to share with other people.
 
-[![tweet](img/tweet.png)](https://twitter.com/intent/tweet?url=https://github.com/tamalweb/json&text=JSON%20explained%20in%20simple%20terms%20via%20@tamalweb)
+[![tweet](img/tweet.png)](https://twitter.com/intent/tweet?url=https://github.com/tamalweb/dom&text=Basic%20DOM%20manipulation%20tips%20for%20frontend%20developers%20via%20@tamalweb)

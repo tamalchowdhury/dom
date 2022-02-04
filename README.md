@@ -43,9 +43,7 @@ Since the `contentElement` is an HTML element, it will have a bunch of methods a
 
 The very first thing you can do with this element is to insert some text content using the `textContent` propery.
 
-:::tip
-Objects have properties and methods. Methods are like functions and will always have a parentheses `()` where you may need to pass in a parameter. While properties are like variables and you can assign them something with equal sign `=`
-:::
+💡**Tip:** *Objects have properties and methods. Methods are like functions and will always have a parentheses `()` where you may need to pass in a parameter. While properties are like variables and you can assign them something with equal sign `=`*
 
 ```js name=script.js
 contentElement.textContent = 'hello'
@@ -66,5 +64,56 @@ element.innerHTML = '<p>This works too!</p>'
 Doing so you just added a new `p` tag with some text inside the original element:
 
 `<div><p>This works too!</p></div>`
+
+## Changing the DOM With User Interaction
+
+So far you have been doing the DOM manipulation all at once. But when building web apps, you want to make your app user interactive. To do this we need **event listeners**.
+
+Event listeners are special functions that hook into the elements and can wait for certain event to happen. This even could be a button click or a keyboard key press.
+
+We will go slow by using a `click` event.
+
+We want to make a change everytime someone clicks the button.
+
+Start by writing your html file with at least two elements, one `<button>` element for the trigger, and one `<div>` element where the change will show.
+
+```html
+<button class='button'>Click Here</button>
+
+<div class='content'></div>
+```
+
+Now open up your `script.js` and target both of these elements so we can manipulate them:
+
+```js
+const button = document.querySelector('.button')
+const contentEl = document.querySelector('.content')
+```
+
+We need to hook an event listener with the `button` element so we can tell when it's being pressed.
+
+Every element has a special method called `.addEventListener()` which handles the event mechanism.
+
+The method will take two primary parameters, first is a string of the type of the event, the second is another function.
+
+```js
+button.addEventListener('click', function() {
+  // Do something when button gets clicked
+})
+```
+
+**Tip:** *JavaScript is a functional language where you can pass in another function as a parameter.*
+
+Since we are listening for the **click** event, you supply the type `click`.
+
+Inside the second function (that is called a callback function), we will write our code to make the DOM changes. It's called a callback function because it will run after the 'click' happened.
+
+```js
+button.addEventListener('click', function() {
+  contentEl.textContent = 'Button Clicked!'
+})
+```
+
+Now when you open up your app and click on the button, the event will fire, the function will run and the content `<div>` will be populated with the text.
 
 

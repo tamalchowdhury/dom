@@ -1,6 +1,8 @@
+![DOM](/img/dom.png)
+
 # DOM Document Object Model
 
-Basic DOM manipulating tips for frontend developers
+Basic DOM manipulation tips for frontend developers
 
 DOM is a huge topic, so I will only cover how to do basic manipulation in this doc.
 
@@ -117,3 +119,8 @@ button.addEventListener('click', function() {
 Now when you open up your app and click on the button, the event will fire, the function will run and the content `<div>` will be populated with the text.
 
 
+## Show some love!
+
+If you learned something new from this repo, please star ⭐ it on GitHub. You can also tweet to share with other people.
+
+[![tweet](img/tweet.png)](https://twitter.com/intent/tweet?url=https://github.com/tamalweb/json&text=JSON%20explained%20in%20simple%20terms%20via%20@tamalweb)
